@@ -1,0 +1,376 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 10px;
+}
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* ------------- sky -------------- */
+.sky {
+  flex-basis: 35%;
+  background-color: skyblue;
+  background-color: #39cccc;
+  background-color: skyblue;
+  position: relative;
+}
+
+.sun {
+  position: absolute;
+  top: 3rem;
+  left: 3rem;
+  width: 10rem;
+  height: 10rem;
+  box-shadow: 0 0 100px rgba(255, 255, 255, 0.8);
+  background-color: #ffdc00;
+  animation: sun 5s linear 0s infinite alternate;
+  border-radius: 50%;
+}
+
+.cloud {
+  background: white;
+  border-radius: 100px;
+  position: absolute;
+  top: 5rem;
+  right: 100px;
+  width: 15rem;
+  height: 5rem;
+  /* border: 3px solid blue; */
+  animation: cloud1 50s linear 0s infinite;
+  /* visibility: hidden; */
+}
+
+.cloud2 {
+  /* border: 1px solid blue; */
+
+  top: 6rem;
+  animation: cloud2 60s linear 0s infinite;
+}
+.clouds3 {
+  animation: cloud3 70s linear 0s infinite;
+
+  top: 7rem;
+}
+.clouds4 {
+  animation: cloud4 80s linear 0s infinite;
+
+  top: 4rem;
+}
+
+.cloud-right {
+  width: 6rem;
+  height: 6rem;
+  top: -35%;
+  right: 5%;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  /* border: 3px solid red; */
+}
+
+.cloud-left {
+  width: 6.5rem;
+  height: 6.5rem;
+  top: -80%;
+  left: 15%;
+  border-radius: 200px;
+  background: white;
+  position: absolute;
+  /* border: 3px solid green; */
+}
+
+.cloud-bottom {
+  /* border: 3px solid yellow; */
+  width: 7rem;
+  height: 7rem;
+  bottom: -55%;
+  right: 40%;
+  border-radius: 100px;
+  background: white;
+  position: absolute;
+}
+
+/* ------------- grass -------------- */
+.land {
+  flex-grow: 1;
+  width: 300%;
+  position: relative;
+  background-color: #2bc03c;
+  background-color: #2ecc40;
+  background-color: #75ce19;
+  animation: land 25s linear 0s infinite;
+}
+
+.fence-far {
+  position: absolute;
+  top: -5rem;
+  left: 0;
+  height: 20rem;
+}
+
+.fence-near {
+  position: absolute;
+  bottom: 0;
+  left: 0px;
+  height: 20rem;
+  z-index: 5;
+  /* animation: fence_near 3s linear 0s infinite; */
+}
+
+.hbox {
+  margin-bottom: 4rem;
+  height: 4rem;
+  width: 400rem;
+  border-radius: 5px;
+  background-color: #c47c34;
+  display: flex;
+}
+
+.vbox {
+  height: 19rem;
+  width: 4rem;
+  margin-right: 15rem;
+  margin-top: -2rem;
+  border-radius: 5px;
+  background-color: #eb953e;
+  /* border: red 1px solid; */
+}
+
+.tree {
+  display: inline-block;
+  position: absolute;
+  left: 60%;
+  top: 15rem;
+  z-index: 5;
+  /* animation: tree1 50s linear 0s infinite; */
+}
+
+.wood {
+  position: absolute;
+  width: 1rem;
+  height: 27rem;
+  background-color: burlywood;
+  z-index: 2;
+}
+
+.leafs {
+  width: 25rem;
+  height: 25rem;
+  border-radius: 50%;
+  background-color: #10ac85bb;
+  position: absolute;
+  z-index: 1;
+  top: -120px;
+  left: -120px;
+}
+
+.branch {
+  position: absolute;
+  width: 1rem;
+  height: 10rem;
+  background-color: burlywood;
+  z-index: 2;
+  transform-origin: bottom;
+}
+
+.branch1 {
+  top: 0;
+  left: 0rem;
+  transform: rotate(50deg)
+}
+.branch2 {
+  top: 0;
+  left: 0rem;
+  transform: rotate(310deg)
+}
+
+/* -----------pig--------------- */
+.pig {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50rem;
+  height: 26rem;
+  /* border: 2px solid red; */
+}
+
+@media only screen and (max-width: 600px) {
+  html {
+    font-size: 7px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  html {
+    font-size: 6px;
+  }
+}
+
+.pig-body {
+  position: absolute;
+  top: 0;
+  z-index: 3;
+  animation: pig_body 0.25s linear 0s infinite alternate;
+  width: 51.2rem;
+  height: 23.1rem;
+}
+
+.pig-ear {
+  position: absolute;
+  top: -3.4rem;
+  right: 4.3rem;
+  width: 15.6rem;
+  height: 14.4rem;
+  transform: rotate(5deg);
+  z-index: 4;
+  transform-origin: bottom;
+  animation: pig_ear 0.25s linear 0s infinite alternate;
+}
+.pig-tail {
+  position: absolute;
+  top: -1.4rem;
+  left: -1.1rem;
+  width: 7rem;
+  height: 12.4rem;
+  transform: rotate(-11deg);
+  animation: pig_body 0.25s linear 0s infinite alternate;
+}
+
+.pig-leg-right-front {
+  position: absolute;
+  bottom: -2.2rem;
+  right: 38rem;
+  width: 6.3rem;
+  height: 18.2rem;
+  z-index: 4;
+  animation: pig_legs_front 0.5s linear 0s infinite alternate;
+}
+.pig-leg-right-back {
+  position: absolute;
+  bottom: -1.7rem;
+  right: 34rem;
+  width: 6.3rem;
+  height: 18.2rem;
+  z-index: 2;
+  animation: pig_legs_back 0.5s linear 0s infinite alternate;
+}
+.pig-leg-left-back {
+  position: absolute;
+  bottom: -1.7rem;
+  left: 32rem;
+  width: 6.3rem;
+  height: 18.2rem;
+  z-index: 2;
+  animation: pig_legs_back 0.5s linear 0s infinite alternate;
+}
+.pig-leg-left-front {
+  position: absolute;
+  bottom: -2.2rem;
+  left: 29rem;
+  width: 6.3rem;
+  height: 18.2rem;
+  z-index: 4;
+  animation: pig_legs_front 0.5s linear 0s infinite alternate;
+}
+
+/* pig body */
+@keyframes pig_body {
+  to {
+    transform: translateY(1rem);
+  }
+}
+/* pig ear */
+@keyframes pig_ear {
+  0% {
+    transform: translateY(0px) rotate(-5deg);
+  }
+  100% {
+    transform: translateY(1rem) rotate(5deg);
+  }
+}
+/* pig legs front */
+@keyframes pig_legs_front {
+  0% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(10deg);
+  }
+}
+/* pig legs back */
+@keyframes pig_legs_back {
+  0% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(-10deg);
+  }
+}
+/* fence near */
+@keyframes land {
+  from {
+    left: -1rem;
+  }
+  to {
+    left: -110rem;
+  }
+}
+/* sun */
+@keyframes sun {
+  to {
+    transform: rotate(360deg) scale(1.2);
+  }
+}
+@keyframes tree1 {
+  from {
+    left: 500rem;
+  }
+  to {
+    left: -18rem;
+  }
+}
+/* clouds */
+@keyframes cloud1 {
+  from {
+    left: 110%;
+    visibility: visible;
+  }
+  to {
+    left: -30rem;
+  }
+}
+@keyframes cloud2 {
+  from {
+    left: 135%;
+    visibility: visible;
+  }
+  to {
+    left: -30rem;
+  }
+}
+@keyframes cloud3 {
+  from {
+    left: 160%;
+    visibility: visible;
+  }
+  to {
+    left: -30rem;
+  }
+}
+@keyframes cloud4 {
+  from {
+    left: 185%;
+    visibility: visible;
+  }
+  to {
+    left: -30rem;
+  }
+} 
